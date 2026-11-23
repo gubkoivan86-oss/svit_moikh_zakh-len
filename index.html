@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Світ моїх захоплень</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: Arial, Helvetica, sans-serif;
+      color: #20243a; background: #f5f6ff; line-height: 1.6;
+    }
+    header {
+      min-height: 390px; padding: 85px 20px; text-align: center; color: white;
+      background: linear-gradient(135deg, #282b63, #6756b8 60%, #a17bd5);
+      display: grid; place-content: center;
+    }
+    header h1 { font-size: clamp(2.3rem, 6vw, 4.2rem); margin: 0 0 12px; }
+    header p { font-size: 1.2rem; margin: 0 auto 25px; max-width: 650px; }
+    nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; padding: 15px; background: white; }
+    nav a { color: #51469b; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #a05ab8; }
+    main { max-width: 1050px; margin: auto; padding: 25px 20px 60px; }
+    section { margin: 34px 0; }
+    h2 { color: #51469b; font-size: 1.8rem; margin-bottom: 12px; }
+    .panel { background: white; border-radius: 18px; padding: 26px; box-shadow: 0 8px 25px #30305b12; }
+    .cards, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; }
+    .card { background: white; border-radius: 16px; padding: 22px; box-shadow: 0 8px 25px #30305b12; }
+    .emoji { font-size: 2.7rem; }
+    .gallery-item {
+      min-height: 165px; border-radius: 16px; display: grid; place-items: center;
+      color: white; font-size: 3.2rem; text-align: center;
+      background: linear-gradient(135deg, #5b60a8, #b17bc4);
+    }
+    .gallery-item:nth-child(2) { background: linear-gradient(135deg, #347c91, #74b9b0); }
+    .gallery-item:nth-child(3) { background: linear-gradient(135deg, #b46c83, #e4a66f); }
+    .fact { border-left: 5px solid #8b70ca; background: #eeebff; padding: 20px 22px; border-radius: 10px; }
+    footer { text-align: center; padding: 28px 16px; color: white; background: #282b63; }
+    @media (max-width: 520px) { header { min-height: 330px; padding: 60px 18px; } nav { gap: 12px; } }
+  </style>
+</head>
+<body>
+  <header id="top">
+    <h1>Світ моїх захоплень</h1>
+    <p>Привіт! Радий / рада бачити тебе на моїй сторінці. Тут я розповім про те, що надихає мене щодня!</p>
+  </header>
+
+  <nav>
+    <a href="#about">Про мене</a>
+    <a href="#hobbies">Захоплення</a>
+    <a href="#why">Чому подобається</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#fact">Цікавинка</a>
+  </nav>
+
+  <main>
+    <section id="about" class="panel">
+      <h2>Про мене</h2>
+      <p>Мене звати Губко Іван. Я навчаюся, відкриваю для себе нове та люблю проводити час із користю. У кожної людини є заняття, які роблять її день цікавішим. Я хочу поділитися своїми улюбленими захопленнями!</p>
+    </section>
+
+    <section id="hobbies">
+      <h2>Мої захоплення</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="emoji">🎮</div>
+          <h3>Відеоігри</h3>
+          <p>Мені подобається грати у відеоігри, проходити цікаві рівні та виконувати завдання. Це чудовий спосіб відпочити й потренувати кмітливість.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">🎧</div>
+          <h3>Музика</h3>
+          <p>Я люблю слухати музику, адже вона допомагає створити настрій, розслабитися та зосередитися.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">⚽</div>
+          <h3>Спорт</h3>
+          <p>Активний відпочинок дарує енергію. Мені подобається рухатися, грати в команді та ставити перед собою невеликі цілі.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="why" class="panel">
+      <h2>Чому мені це подобається</h2>
+      <p>Мої захоплення допомагають відпочивати після навчання, розвивати уважність і наполегливість, дізнаватися нове та знаходити спільну мову з іншими людьми. Вони роблять моє дозвілля яскравішим!</p>
+    </section>
+
+    <section id="gallery">
+      <h2>Фотогалерея</h2>
+      <div class="gallery">
+        <div class="gallery-item" role="img" aria-label="Ігровий контролер">🎮<br><small>Ігри</small></div>
+        <div class="gallery-item" role="img" aria-label="Навушники">🎧<br><small>Музика</small></div>
+        <div class="gallery-item" role="img" aria-label="Футбольний м’яч">⚽<br><small>Спорт</small></div>
+      </div>
+      <p><small>Це тематичні ілюстрації. За бажанням заміни їх власними фотографіями.</small></p>
+    </section>
+
+    <section id="fact" class="fact">
+      <h2>Цікавинка</h2>
+      <p>Моя мрія — спробувати ще більше цікавих занять, навчитися новому та знайти захоплення, яким зможу пишатися!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Дякую, що завітав / завітала на мій сайт! Знаходь час для того, що приносить тобі радість 💜</p>
+  </footer>
+</body>
+</html>
